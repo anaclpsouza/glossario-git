@@ -9,8 +9,37 @@
 </head>
 
 <body>
-    <header></header>
+    <header><h1>Glossário Git</h1></header>
     <main>
+        <section id="conceitos" class="secao-glossario">
+            <h2> Conceitos Fundamentais</h2>
+            <div class="grid-cards">
+                <article class="card">
+                    <h3>Repository (Repositório)</h3>
+                    <p>Espaço de armazenamento onde o Git guarda todo o histórico de alterações do seu projeto (pasta
+                        <code>.git</code>).</p>
+                </article>
+ 
+                <article class="card">
+                    <h3>Commit</h3>
+                    <p>Um "instantâneo" (snapshot) do seu código em um determinado momento. Cada commit possui um ID
+                        único (hash).</p>
+                </article>
+ 
+                <article class="card">
+                    <h3>Branch (Ramificação)</h3>
+                    <p>Uma linha de desenvolvimento independente. Permite criar funcionalidades sem afetar o código
+                        principal (<code>main</code>).</p>
+                </article>
+ 
+                <article class="card">
+                    <h3>Working Tree / Staging Area / Local Repo</h3>
+                    <p>Os 3 estados locais do Git: o diretório de trabalho atual, a área de preparação (index) e o
+                        repositório local salvo.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="fluxo">
             <h2>Lidadando com Conflitos</h2>
             <div class="card">
