@@ -53,6 +53,128 @@
                     <li>Finalize a integração executando apenas: <code>git commit</code>.</li>
                 </ol>
             </div>
+            <div class="card">
+                <h3>O que fazer em caso de Merge Conflict?</h3>
+                <ol>
+                    <li>Abra os arquivos com conflito (marcados com <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> e
+                        <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>).
+                    </li>
+                    <li>Edite o código mantendo apenas a versão final desejada e remova as marcações do Git.</li>
+                    <li>Adicione o arquivo corrigido ao staging: <code>git add nome-do-arquivo</code>.</li>
+                    <li>Finalize a integração executando apenas: <code>git commit</code>.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="comandos">
+            <h2>Comandos Mais Usados</h2>
+            <div class="grid-cards">
+                <article class="card">
+                    <h3><code>git init</code></h3>
+                    <p>
+                        Inicializa um novo repositório Git na pasta atual do projeto.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git status</code></h3>
+                    <p>
+                        Exibe o estado dos arquivos: modificados, não rastreados (untracked) ou prontos para o commit.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git add</code></h3>
+                    <p>
+                        Adiciona arquivos modificados à área de preparação (Staging Area). Use <code>git add .</code>
+                        para adicionar tudo.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git commit -m "mensagem"</code></h3>
+                    <p>
+                        Grava as alterações registradas no staging area com uma mensagem explicativa do que foi feito.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git branch</code></h3>
+                    <p>
+                        Lista as branches existentes. Use <code>git branch nome</code> para criar uma nova ou
+                        <code>git branch -d nome</code> para deletar.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git checkout / git switch</code></h3>
+                    <p>
+                        Alterna entre branches. Use <code>git checkout -b nome</code> para criar e mudar para a branch
+                        nova ao mesmo tempo.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git merge</code></h3>
+                    <p>
+                        Junta as alterações de outra branch na branch onde você está posicionado atualmente.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git clone [url]</code></h3>
+                    <p>
+                        Baixa a cópia de um repositório remoto existente no GitHub para a sua máquina local.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git push</code></h3>
+                    <p>
+                        Envia os commits realizados localmente para o repositório remoto (ex: GitHub).
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git pull</code></h3>
+                    <p>
+                        Baixa e integra automaticamente as alterações do repositório remoto na sua branch atual
+                        (Fetch + Merge).
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git log --oneline</code></h3>
+                    <p>
+                        Exibe o histórico de commits do projeto de forma simplificada e resumida em uma linha por
+                        commit.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git stash</code></h3>
+                    <p>
+                        Guarda temporariamente as alterações não salvas (rascunho) em uma "gaveta" para limpar o
+                        ambiente de trabalho.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git tag -a [nome] -m ""</code></h3>
+                    <p>
+                        Cria uma etiqueta anotada em um commit específico para marcar versões oficiais de lançamento
+                        (ex: <code>v1.0</code>).
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3><code>git reset</code></h3>
+                    <p>
+                        Desfaz commits ou remove arquivos do Staging Area, podendo alterar o histórico de
+                        desenvolvimento.
+                    </p>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
