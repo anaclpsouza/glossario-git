@@ -18,6 +18,10 @@ body {
     flex-direction: column;
 }
 
+section {
+    margin-block: 2rem;
+}
+
 .card {
     background-color: #ffffff;
     border-radius: 10px;
