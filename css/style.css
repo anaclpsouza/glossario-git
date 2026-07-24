@@ -96,3 +96,9 @@ header h1 {
     outline: none;
     border-color: #888;
 }
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
