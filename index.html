@@ -10,31 +10,46 @@
 
 <body>
     <header>
-        <h1>Glossário Git</h1>
-        <input type="search" id="busca" placeholder="Buscar comando ou conceito...">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo Git" class="logo">
+            <h1>Glossário Git</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#conceitos">Conceitos</a></li>
+                <li><a href="#comandos">Comandos</a></li>
+                <li><a href="#fluxo">Fluxo de Trabalho</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <section class="hero">
+            <h2>Guia Rápido de Consulta</h2>
+            <p>Os principais comandos e conceitos do Git explicados de forma simples e direta.</p>
+            <input type="search" id="busca" placeholder="Buscar comando ou conceito...">
+        </section>
         <section id="conceitos" class="secao-glossario">
             <h2> Conceitos Fundamentais</h2>
             <div class="grid-cards">
                 <article class="card">
                     <h3>Repository (Repositório)</h3>
                     <p>Espaço de armazenamento onde o Git guarda todo o histórico de alterações do seu projeto (pasta
-                        <code>.git</code>).</p>
+                        <code>.git</code>).
+                    </p>
                 </article>
- 
+
                 <article class="card">
                     <h3>Commit</h3>
                     <p>Um "instantâneo" (snapshot) do seu código em um determinado momento. Cada commit possui um ID
                         único (hash).</p>
                 </article>
- 
+
                 <article class="card">
                     <h3>Branch (Ramificação)</h3>
                     <p>Uma linha de desenvolvimento independente. Permite criar funcionalidades sem afetar o código
                         principal (<code>main</code>).</p>
                 </article>
- 
+
                 <article class="card">
                     <h3>Working Tree / Staging Area / Local Repo</h3>
                     <p>Os 3 estados locais do Git: o diretório de trabalho atual, a área de preparação (index) e o
