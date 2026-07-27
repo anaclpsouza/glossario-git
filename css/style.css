@@ -18,6 +18,14 @@ body {
     flex-direction: column;
 }
 
+section {
+    margin-block: 2rem;
+}
+
+h2 {
+    margin-bottom: .5em;
+}
+
 .card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -156,3 +164,14 @@ nav a:hover {
     font-size: 1.1rem;
 }
 
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.flex-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
