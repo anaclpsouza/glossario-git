@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossário - Git</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Glossário Git</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo Git" class="logo">
+            <h1>Glossário Git</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#conceitos">Conceitos</a></li>
+                <li><a href="#comandos">Comandos</a></li>
+                <li><a href="#fluxo">Fluxo de Trabalho</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Guia Rápido de Consulta</h2>
+            <p>Os principais comandos e conceitos do Git explicados de forma simples e direta.</p>
+            <input type="search" id="busca" placeholder="Buscar comando ou conceito...">
+        </section>
+
+        <p id="sem-resultados">
+            Nenhum resultado encontrado.
+        </p>
+
+        <section id="conceitos" class="secao-glossario">
+            <h2>Conceitos Fundamentais</h2>
+            <div class="grid-cards"></div>
+        </section>
+
+        <section id="comandos" class="secao-glossario">
+            <h2>Comandos Mais Usados</h2>
+            <div class="grid-cards"></div>
+        </section>
+
+        <section id="fluxo" class="secao-glossario">
+            <h2>Lidando com Conflitos</h2>
+            <div class="grid-cards"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026
+            <a href="https://github.com/anaclpsouza/glossario-git/" target="_blank">
+                Glossário Git
+            </a>
+        </p>
+        <p>
+            Feito com ❤️ por
+            <a href="https://github.com/anaclpsouza/" target="_blank" rel="noopener noreferrer">
+                Ana Souza
+            </a>,
+            <a href="https://github.com/adrianoaraujods" target="_blank" rel="noopener noreferrer">
+                Adriano Araújo
+            </a> e
+            <a href="https://github.com/MatheusKemuel" target="_blank" rel="noopener noreferrer">
+                Matheus Silva
+            </a>
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
