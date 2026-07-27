@@ -43,7 +43,16 @@ const listaCards = [
     titulo: "Working Tree / Staging Area / Local Repo",
     descricao: "Os 3 estados locais do Git: o diretório de trabalho atual, a área de preparação (index) e o repositório local salvo."
   },
-
+  {
+    secaoId: "conceitos",
+    titulo: "HEAD",
+    descricao: "Ponteiro especial que indica em qual branch ou commit você está posicionado atualmente no seu repositório local."
+  },
+  {
+    secaoId: "conceitos",
+    titulo: "Detached HEAD",
+    descricao: "Estado em que o HEAD aponta diretamente para um commit específico em vez de apontar para uma branch. Alterações feitas aqui não salvam em nenhuma branch."
+  },
   {
     secaoId: "comandos",
     titulo: "git init",
@@ -115,6 +124,21 @@ const listaCards = [
     descricao: "Desfaz commits ou remove arquivos do Staging Area, podendo alterar o histórico de desenvolvimento."
   },
   {
+    secaoId: "comandos",
+    titulo: "git checkout -",
+    descricao: "Atalho rápido para voltar instantaneamente para a última branch em que você estava antes da atual."
+  },
+  {
+    secaoId: "comandos",
+    titulo: "git diff",
+    descricao: "Compara as alterações feitas nos arquivos no seu diretório de trabalho antes de adicioná-los à Staging Area."
+  },
+  {
+    secaoId: "comandos",
+    titulo: "git branch -m [novo-nome]",
+    descricao: "Renomeia a branch atual (ou a branch especificada) para um novo nome localmente."
+  },
+  {
     secaoId: "fluxo",
     titulo: "O que fazer em caso de Merge Conflict?",
     descricao: "Abra os arquivos com conflito, edite o código mantendo a versão final, remova as marcações do Git, adicione ao staging (git add) e finalize com git commit."
@@ -123,11 +147,61 @@ const listaCards = [
     secaoId: "fluxo",
     titulo: "Prevenção de Conflitos",
     descricao: "Mantenha sua branch atualizada frequentemente fazendo git pull ou git merge develop antes de abrir um Pull Request."
+  },
+  {
+    secaoId: "flags",
+    titulo: "--oneline",
+    descricao: "Resume o histórico de commits exibindo apenas o hash curto e a primeira linha da mensagem (usado com git log)."
+  },
+  {
+    secaoId: "flags",
+    titulo: "--amend",
+    descricao: "Altera o último commit realizado, permitindo atualizar a mensagem ou incluir novos arquivos esquecidos (usado com git commit)."
+  },
+  {
+    secaoId: "flags",
+    titulo: "-b",
+    descricao: "Cria e faz o checkout para uma nova branch simultaneamente (usado com git checkout ou git switch -c)."
+  },
+  {
+    secaoId: "flags",
+    titulo: "-u / --set-upstream",
+    descricao: "Vincular a branch local a uma branch remota ao fazer o primeiro push, facilitando os próximos git push/pull."
+  },
+  {
+    secaoId: "flags",
+    titulo: "-d / -D",
+    descricao: "Deleta uma branch local. Use -d para exclusão segura ou -D para forçar a remoção de alterações não unificadas."
+  },
+  {
+    secaoId: "flags",
+    titulo: "--staged / --cached",
+    descricao: "Visualiza apenas as alterações que já foram adicionadas à Staging Area (usado com git diff)."
+  },
+  {
+    secaoId: "flags",
+    titulo: "-am",
+    descricao: "Combina as flags -a e -m para adicionar todas as alterações de arquivos já rastreados e realizar o commit com mensagem em um único comando (ex: git commit -am \"mensagem\")."
+  },
+  {
+    secaoId: "flags",
+    titulo: "HEAD~ / HEAD^",
+    descricao: "Atalhos de navegação relativa: HEAD~1 (ou HEAD~) refere-se ao commit anterior; HEAD~2 refere-se a dois commits atrás."
+  },
+  {
+    secaoId: "flags",
+    titulo: "--graph --oneline",
+    descricao: "Exibe o histórico de commits formatado como um gráfico visual de branches no próprio terminal (usado com git log)."
+  },
+  {
+    secaoId: "flags",
+    titulo: "--hard",
+    descricao: "Restaura o repositório para um estado anterior descartando permanentemente todas as alterações locais não comitadas (usado com git reset)."
   }
 ];
 
 function atualizarTela(cardsExibidos) {
-  const secoes = ["conceitos", "comandos", "fluxo"];
+  const secoes = ["conceitos", "comandos", "fluxo", "flags"];
 
   secoes.forEach(function (secaoId) {
     const cardsDaSecao = cardsExibidos.filter(card => card.secaoId === secaoId);
